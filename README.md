@@ -7,6 +7,8 @@ You can also join our [Discord](https://discord.gg/ux6zzd)
 - Create complex functions more easily, such as circles.
 
 ### How to Use?
+You will first have to add [Gson](https://github.com/google/gson) as library.
+
 Create a project that uses JFunction as a library.
 Create a function.json file in the src folder:
 ```json
