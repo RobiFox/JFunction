@@ -1,6 +1,6 @@
 # JFunction
 JFunction is a library in Java to create MCFunctions.
-You can also join our [Discord](https://discord.gg/ux6zzd)
+You can also join our [Discord](https://discord.gg/FPP9gxp)
 
 ### Why?
 - Convert functions to newer versions easily.
