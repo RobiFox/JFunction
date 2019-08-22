@@ -21,11 +21,7 @@ Create a function.json file in the src folder:
     "Made by %author.",
     "############"
   ],
-  "description": [
-    {
-      "text": "Test Desc"
-    }
-  ]
+  "description": "Description"
 }
 ```
 The required fields are `id`, `main` and `description`.

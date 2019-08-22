@@ -20,4 +20,6 @@ public @interface Function {
      * @return If the function should be a loop function.
      */
     FunctionType type() default FunctionType.SINGLE;
+
+    String namespace() default "";
 }

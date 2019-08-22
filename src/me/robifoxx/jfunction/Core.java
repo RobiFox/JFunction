@@ -1,6 +1,7 @@
 package me.robifoxx.jfunction;
 
 import me.robifoxx.jfunction.annotations.Function;
+import me.robifoxx.jfunction.enums.FunctionType;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
@@ -11,6 +12,7 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class Core implements ICore {
+    String nameSpace;
     File folder;
     List<String> signature;
 
@@ -23,6 +25,13 @@ public abstract class Core implements ICore {
             if(m.isAnnotationPresent(Function.class)) {
                 Function f = m.getAnnotation(Function.class);
                 String fileName = f.name().toLowerCase().replace(" ", "_");
+                String ns = nameSpace;
+                if(!f.namespace().equals("")) ns = f.namespace();
+                if(f.type() == FunctionType.REPEATING) {
+                    JFunction.tick.add(ns + ":" + fileName);
+                } else if(f.type() == FunctionType.START) {
+                    JFunction.start.add(ns + ":" + fileName);
+                }
                 function.toFile = new File(folder + "/" + fileName + ".mcfunction");
                 System.out.println("Creating function " + fileName + ". (" + m.getName() + ")");
                 System.out.println("(" + function.toFile.getPath() + ")");
