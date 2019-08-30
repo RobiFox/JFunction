@@ -6,6 +6,8 @@ package me.robifoxx.jfunction.entity;
  * with modifiable NBT.
  */
 public class EntityType {
+    public static final String PLAYER = "player";
+
     public static final String AREA_EFFECT_CLOUD = "area_effect_cloud";
     public static final String ARMOR_STAND = "armor_stand";
     public static final String ARROW = "arrow";
